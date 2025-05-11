@@ -115,7 +115,7 @@ class DiseqcSender(Screen):
             if not line:
                 continue
             try:
-                print("[DEBUG] kuldom:"+line)
+                print("[DEBUG] Send:"+line)
                 cmd = eDVBDiseqcCommand()
                 cmd.setCommandString(line)
                 self.frontend.sendDiseqc(cmd)
