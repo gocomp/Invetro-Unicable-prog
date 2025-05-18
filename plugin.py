@@ -11,7 +11,7 @@ from os import path
 
 class DiseqcSender(Screen):
     skin = """
-        <screen position="center,center" size="760,400" title="Send DiSEqC Binary">
+        <screen position="center,center" size="760,400" title="Send DiSEqC LNB prog">
             <widget name="filelist" position="10,10" size="540,340" scrollbarMode="showOnDemand" />
             <widget name="key_red" position="10,360" size="130,30" font="Regular;20" valign="center" halign="center" backgroundColor="#9f1313" foregroundColor="white" />
         </screen>"""
