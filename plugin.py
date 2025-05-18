@@ -18,7 +18,7 @@ class DiseqcSender(Screen):
 
     def __init__(self, session):
         Screen.__init__(self, session)
-        self.setTitle("Send INVERTO Unicable dsq File")
+        self.setTitle("Send INVERTO Unicable LNB dsq File")
         self.session = session
 
         self.filelist = FileList("/tmp/", matchingPattern=".*\.dsq$")
