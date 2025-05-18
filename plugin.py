@@ -115,7 +115,7 @@ class DiseqcSender(Screen):
             if not line:
                 continue
             try:
-                print("[DEBUG] Send:"+line)
+                print("[DEBUG] kuldom:"+line)
                 cmd = eDVBDiseqcCommand()
                 cmd.setCommandString(line)
                 self.frontend.sendDiseqc(cmd)
@@ -126,8 +126,8 @@ class DiseqcSender(Screen):
             except Exception as e:
                 self.session.open(MessageBox, "Sending failed:" , MessageBox.TYPE_ERROR)
                 return
+        self.session.open(MessageBox, "All DiSEqC commands sent successfully! Please restart box!", MessageBox.TYPE_INFO)
 
-        self.session.open(MessageBox, "All DiSEqC commands sent successfully!", MessageBox.TYPE_INFO)
 
 def main(session, **kwargs):
     session.open(DiseqcSender)
